@@ -29,7 +29,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl">
+    <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl">
         <owl:versionInfo rdf:datatype="&xsd;string">1.2</owl:versionInfo>
         <dc:issued rdf:datatype="&xsd;date">2014-05-01</dc:issued>
         <terms:modified rdf:datatype="&xsd;date">2015-09-24</terms:modified>
