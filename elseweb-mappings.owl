@@ -2,45 +2,35 @@
 
 
 <!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY resource "http://semanticscience.org/resource/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY terms "http://purl.org/dc/terms/" >
-    <!ENTITY vann "http://purl.org/vocab/vann/" >
-	<!ENTITY ns0 "http://protege.stanford.edu/plugins/owl/protege#" >
-	<!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-	<!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY ns0 "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY elseweb-data "http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/mappings/elseweb-mappings.owl#"
      xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/mappings/elseweb-mappings.owl"
-	 xmlns:cc="http://creativecommons.org/ns#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:elseweb-data="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#"
-     xmlns:terms="http://purl.org/dc/terms/" xmlns:ns0="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:cc="http://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:elseweb-data="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:ns0="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/mappings/elseweb-mappings.owl">
-        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
-        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl"/>
-        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl"/>
-        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl"/>
-        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl"/>
-        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-service.owl"/>
-		    <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper-parameters.owl"/>
-        <owl:versionIRI rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-mappings.owl"/>
-        <rdfs:isDefinedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-mappings.owl"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/dcat"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
-		 <owl:versionInfo rdf:datatype="&xsd;string">1.2</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string">1.2</owl:versionInfo>
         <dc:issued rdf:datatype="&xsd;date">2014-05-01</dc:issued>
         <terms:modified rdf:datatype="&xsd;date">2015-09-24</terms:modified>
         <dc:contributor rdf:datatype="&xsd;string">Contributors are those that engage in discussions during the development of this ontology (in alphabetical order):
@@ -55,6 +45,7 @@ aimee stewart</dc:contributor>
         <cc:license rdf:datatype="&xsd;anyURI">http://creativecommons.org/licenses/by/3.0/</cc:license>
         <dc:creator rdf:datatype="&xsd;anyURI">http://cybershare.utep.edu</dc:creator>
         <vann:preferredNamespaceUri rdf:datatype="&xsd;string">http://ontology.cybershare.utep.edu/ELSEWeb/</vann:preferredNamespaceUri>
+        <ns0:defaultLanguage>en</ns0:defaultLanguage>
         <terms:identifier>elseweb-mappings.owl</terms:identifier>
         <dc:title xml:lang="en">ELSEWeb Mappings Ontology</dc:title>
         <dc:creator xml:lang="en">ELSEWeb team</dc:creator>
@@ -65,31 +56,19 @@ website: http://elseweb.cybershare.utep.edu/ontologies
 email: nvillanuevarosales@utep.edu
 </dc:description>
         <vann:preferredNamespacePrefix xml:lang="en">elseweb-mappings</vann:preferredNamespacePrefix>
-        <ns0:defaultLanguage>en</ns0:defaultLanguage>
-    
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl"/>
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl"/>
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper-parameters.owl"/>
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-mappings.owl"/>
+        <owl:versionIRI rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-mappings.owl"/>
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl"/>
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-service.owl"/>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/dcat"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
     </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     
 
 
@@ -106,15 +85,15 @@ email: nvillanuevarosales@utep.edu
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#encodedInFormat -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#encodedInFormat">
+    <owl:ObjectProperty rdf:about="&elseweb-data;encodedInFormat">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#mediaType"/>
-    </rdf:Description>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasManifestation -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasManifestation">
+    <rdf:Description rdf:about="&elseweb-data;hasManifestation">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
     </rdf:Description>
     
@@ -157,7 +136,7 @@ email: nvillanuevarosales@utep.edu
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Characteristic -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Characteristic">
+    <rdf:Description rdf:about="&elseweb-data;Characteristic">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic"/>
         <rdfs:subClassOf rdf:resource="&resource;SIO_000614"/>
     </rdf:Description>
@@ -166,15 +145,15 @@ email: nvillanuevarosales@utep.edu
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DatasetManifestation -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DatasetManifestation">
+    <owl:Class rdf:about="&elseweb-data;DatasetManifestation">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Entity -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Entity">
+    <rdf:Description rdf:about="&elseweb-data;Entity">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
         <rdfs:subClassOf rdf:resource="&resource;SIO_000776"/>
     </rdf:Description>
@@ -183,32 +162,32 @@ email: nvillanuevarosales@utep.edu
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Format -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Format">
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/MediaTypeOrExtent"/>
-    </rdf:Description>
+    <owl:Class rdf:about="&elseweb-data;Format">
+        <rdfs:subClassOf rdf:resource="&terms;MediaTypeOrExtent"/>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeographicRegion -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeographicRegion">
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <owl:Class rdf:about="&elseweb-data;GeographicRegion">
+        <rdfs:subClassOf rdf:resource="&terms;Location"/>
         <resource:example rdf:datatype="&xsd;string">America</resource:example>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeospatialDataset -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeospatialDataset">
+    <owl:Class rdf:about="&elseweb-data;GeospatialDataset">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Provider -->
 
-    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Provider">
+    <owl:Class rdf:about="&elseweb-data;Provider">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
     </owl:Class>
     
@@ -216,26 +195,27 @@ email: nvillanuevarosales@utep.edu
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Theme -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Theme">
+    <owl:Class rdf:about="&elseweb-data;Theme">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#TimePeriod -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#TimePeriod">
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
-    </rdf:Description>
+    <owl:Class rdf:about="&elseweb-data;TimePeriod">
+        <rdfs:label>time period</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&terms;PeriodOfTime"/>
+    </owl:Class>
     
 
 
     <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Unit -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Unit">
+    <owl:Class rdf:about="&elseweb-data;Unit">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Unit"/>
         <rdfs:subClassOf rdf:resource="&resource;SIO_000074"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -355,19 +335,31 @@ email: nvillanuevarosales@utep.edu
 
     <!-- http://purl.org/dc/terms/Location -->
 
-    <owl:Class rdf:about="http://purl.org/dc/terms/Location"/>
+    <owl:Class rdf:about="&terms;Location">
+        <rdfs:label>location</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://purl.org/dc/terms/PeriodOfTime -->
 
-    <owl:Class rdf:about="http://purl.org/dc/terms/PeriodOfTime"/>
+    <owl:Class rdf:about="&terms;PeriodOfTime">
+        <rdfs:label>period of time</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#Concept -->
 
-    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:label>concept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
     
 
 
@@ -379,15 +371,15 @@ email: nvillanuevarosales@utep.edu
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResultID">
-        <rdfs:label>has result ID</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResultURL">
         <rdfs:label>has result URL</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResultID">
+        <rdfs:label>has result ID</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
 
